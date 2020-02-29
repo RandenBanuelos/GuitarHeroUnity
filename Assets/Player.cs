@@ -1,11 +1,12 @@
 ﻿using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
 	public int playerNumber;
-	public PlayerInput playerInput;
+	public KeyPlayerInput playerInput;
 	public int layerMask;
 	public Song.Difficulty difficulty;
 	public NoteCounter noteCounter;
@@ -129,7 +130,7 @@ public class Player : MonoBehaviour
 		cam.GetComponent<Camera>().cullingMask = layerMask;
 		SetLayerRecursive(transform,10+ playerNumber);
 
-		playerInput = new PlayerInput(PlayerInput.Device.Xinput, playerNumber);
+		playerInput = new KeyPlayerInput();
 
 		return output;
 	}
