@@ -56,22 +56,22 @@ public class XInput : MonoBehaviour
 		instance.activePlayers = players;
 	}
 
-	public static bool GetButton(int player, Button button)
+	public static bool GetButton(int player, Button button) // Returns a boolean
 	{
 		if (player > instance.currentState.Length - 1) return false;
 		return GetButtonState(instance.currentState[player], button) == ButtonState.Pressed;
 	}
-	public static bool GetButtonDown(int player, Button button)
+	public static bool GetButtonDown(int player, Button button) // Returns a boolean
 	{
 		if (player > instance.currentState.Length - 1) return false;
 		return (GetButtonState(instance.currentState[player], button) == ButtonState.Pressed)&& (GetButtonState(instance.previousState[player], button) == ButtonState.Released);
 	}
-	public static bool GetButtonUp(int player, Button button)
+	public static bool GetButtonUp(int player, Button button) // Returns a boolean
 	{
 		if (player > instance.currentState.Length - 1) return false;
 		return (GetButtonState(instance.currentState[player], button) == ButtonState.Released) && (GetButtonState(instance.previousState[player], button) == ButtonState.Pressed);
 	}
-	public static float GetAxis(int player, Axis axis)
+	public static float GetAxis(int player, Axis axis) // Returns an integer??
 	{
 		if (player > instance.currentState.Length - 1) return 0;
 		return GetAxis(instance.currentState[player], axis);
