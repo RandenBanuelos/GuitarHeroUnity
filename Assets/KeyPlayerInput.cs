@@ -44,20 +44,20 @@ public class KeyPlayerInput
 		// 	fred[0] = false;
 		// }
 
-		fred[0] = Input.GetKeyDown(keyCodes[0]);
+		fred[0] = Input.GetKey(keyCodes[0]);
 		if (fred[0]){
 			Debug.Log("1 has been pressed");
 		}
-		fred[1] = Input.GetKeyDown(keyCodes[1]);
+		fred[1] = Input.GetKey(keyCodes[1]);
 		if (fred[1]){
 			Debug.Log("2 has been pressed");
 		}
-		fred[2] = Input.GetKeyDown(keyCodes[2]);
+		fred[2] = Input.GetKey(keyCodes[2]);
 		if (fred[2]){
 			Debug.Log("3 has been pressed");
 		}
-		fred[3] = Input.GetKeyDown(keyCodes[3]);
-		fred[4] = Input.GetKeyDown(keyCodes[4]);
+		fred[3] = Input.GetKey(keyCodes[3]);
+		fred[4] = Input.GetKey(keyCodes[4]);
 		startPressed = Input.GetKeyDown(KeyCode.A);
 		starPressed = Input.GetKeyDown(KeyCode.D);
 		strumPressed = Input.GetKeyDown(KeyCode.Space);
